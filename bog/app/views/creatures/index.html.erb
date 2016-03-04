@@ -3,12 +3,14 @@
 
 
 <% @creatures.each do |creature| %>
-<ul>
-  <li>
-    <h3><%= link_to creature.name, creature %></h3>
-    <p><%= creature.description %></p>
-    <p><%= link_to 'Edit', edit_creature_path(creature) %></p>
-    <p><%= link_to 'Delete', creature, method: :delete %></p>
-  </li>
-</ul>
+ <div class='well'> 
+  <ul>
+    <li>
+      <h3><%= link_to creature.name, creature %></h3>
+      <p><%= creature.description %></p>
+      <p><%= link_to 'Edit', edit_creature_path(creature) %></p>
+      <p><%= link_to 'Delete', creature, method: :delete %></p>
+    </li>
+  </ul>
+</div>
 <% end %>
